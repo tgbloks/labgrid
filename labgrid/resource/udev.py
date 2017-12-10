@@ -198,10 +198,10 @@ class MXSUSBLoader(USBResource):
 @attr.s(cmp=False)
 class AndroidFastboot(USBResource):
     def filter_match(self, device):
-        if device.get('ID_VENDOR_ID') != "1d6b":
-            return False
-        if device.get('ID_MODEL_ID') != "0104":
-            return False
+#        if device.get('ID_VENDOR_ID') != "1d6b":
+#            return False
+#        if device.get('ID_MODEL_ID') != "0104":
+#            return False
         return super().filter_match(device)
 
 @target_factory.reg_resource
